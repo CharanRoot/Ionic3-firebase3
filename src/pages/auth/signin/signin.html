@@ -1,0 +1,31 @@
+<ion-content padding>
+  <div class="title">Demo</div>
+  <div padding>
+    <form [formGroup]="form" (ngSubmit)="signInWithEmail()">
+      <ion-item>
+        <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="password" formControlName="password"></ion-input>
+      </ion-item>
+      <button ion-button block outline color="primary" class="signin-button" 
+        type="submit" [disabled]="!form.valid"
+      >
+        Login
+      </button>
+    </form>
+    <div>
+      <p class="forgot-password" style="float: left"(click)="navigateTo('auth-password')">forgot password?</p>
+      <p class="forgot-password" style="float: right" (click)="navigateTo('auth-signup')">Register</p>
+    </div>
+     <p style="padding: 5px" ion-text color="danger" *ngIf="hasError">{{errorMessage}}</p>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="footer">
+    <div (click)="navigateTo('auth-signup')">
+      <span>Do not have an account? <strong>About Us </strong>.</span>
+    </div>
+  </ion-toolbar>
+</ion-footer>
