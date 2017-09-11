@@ -14,11 +14,21 @@
         Login
       </button>
     </form>
-    <div>
-      <p class="forgot-password" style="float: left"(click)="navigateTo('auth-password')">forgot password?</p>
-      <p class="forgot-password" style="float: right" (click)="navigateTo('auth-signup')">Register</p>
+    
+    <div class="row icon-row">
+
+      <div class="col text-center">
+        <p class="forgot-password" style="float: left" (click)="navigateTo('auth-password')">forgot password?</p>
+      </div>
+
+
+      <div class="col text-center">
+        <p class="forgot-password" style="float: right" (click)="navigateTo('auth-signup')">Register</p>
+      </div>
+
     </div>
-     <p style="padding: 5px" ion-text color="danger" *ngIf="hasError">{{errorMessage}}</p>
+    <p style="padding-left: 5px" ion-text color="danger" *ngIf="hasError">{{errorMessage}}</p>
+
   </div>
 </ion-content>
 

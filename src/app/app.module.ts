@@ -18,10 +18,10 @@ import { AuthProvider } from '../providers/auth/auth';
 import { DataProvider } from '../providers/data/data';
 import { FunctionsProvider } from '../providers/functions/functions';
 
+// Add your Fireabse Config here.
 const firebaseConfig = {
-   
+  
 };
-
 
 
 
